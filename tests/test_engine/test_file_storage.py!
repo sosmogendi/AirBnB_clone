@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+"""
+This module contains unit tests for the FileStorage class.
+"""
+
+import unittest
+from models.engine.file_storage import FileStorage
+from models.base_model import BaseModel
+
+class TestFileStorage(unittest.TestCase):
+    """
+    Test cases for the FileStorage class.
+    """
+
+    def test_all(self):
+        """Test all method."""
+        storage = FileStorage()
+        all_objs = storage.all()
+        self.assertIsInstance(all_objs, dict)
+
+    def test_new(self):
+        """Test new method."""
+        storage = FileStorage()
+        base = BaseModel()
+        storage.new(base)
+        self.assertIn(base.__class__.__name__ + '.' + base.id, storage.all())
+
+if __name__ == '__main__':
+    unittest.main()
