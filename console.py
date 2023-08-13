@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Module for the Command Interpreter.
 """
@@ -183,8 +182,8 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        '''dont execute anything when user
-           press enter an empty line
+        '''Don't execute anything when user
+           presses enter on an empty line.
         '''
         pass
 
