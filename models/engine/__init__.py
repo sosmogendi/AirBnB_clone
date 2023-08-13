@@ -2,11 +2,9 @@
 """
 This module initializes the engine package.
 """
-
 from models.engine.file_storage import FileStorage
 
-# Create a storage instance
+# Create an instance of FileStorage
 storage = FileStorage()
-
-# Load the stored data from file
+# Load data from JSON file into storage
 storage.reload()
