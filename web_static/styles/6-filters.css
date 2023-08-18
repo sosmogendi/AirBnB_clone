@@ -60,17 +60,27 @@
 .popover {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
     background-color: #FAFAFA;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     list-style: none;
     padding: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .locations:hover .popover,
 .amenities:hover .popover {
     display: block;
+}
+
+.popover li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.popover h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
 }
