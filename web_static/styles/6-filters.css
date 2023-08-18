@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 20px; /* Adjust padding as needed */
 }
 
 .locations,
@@ -18,6 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .locations {
@@ -30,14 +31,34 @@
     margin: 0;
 }
 
-.locations h4,
-.amenities h4 {
-    font-weight: 400;
-    font-size: 14px;
+.locations h2,
+.amenities h2 {
+    font-size: 16px;
     margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+}
+
+.popover {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.locations:hover .popover,
+.amenities:hover .popover {
+    display: block;
+}
+
+.cities {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .search-button {
@@ -51,48 +72,9 @@
     opacity: 1;
     transition: opacity 0.3s ease;
     cursor: pointer;
-    margin-left: auto;
+    margin-left: auto; /* Align button to the right side */
 }
 
 .search-button:hover {
     opacity: 0.9;
-}
-.popover {
-    display: none;
-    position: absolute;
-    background-color: #FAFAFA;
-    border: 1px solid #DDDDDD;
-    border-radius: 4px;
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    top: calc(100% + 5px);
-    left: 0;
-    z-index: 1;
-}
-
-.locations:hover .popover,
-.amenities:hover .popover {
-    display: block;
-}
-
-.popover ul {
-    padding: 10px;
-    margin: 0;
-}
-
-.popover li {
-    padding: 5px 0;
-    cursor: pointer;
-}
-
-.popover h2 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 10px;
-}
-
-.popover h2 span {
-    color: #FF5A5F;
 }
