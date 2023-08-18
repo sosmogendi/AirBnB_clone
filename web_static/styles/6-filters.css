@@ -67,9 +67,9 @@
     padding: 0;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    top: 100%;
+    top: calc(100% + 5px);
     left: 0;
-    margin-top: 5px;
+    z-index: 1;
 }
 
 .locations:hover .popover,
@@ -77,8 +77,13 @@
     display: block;
 }
 
-.popover li {
+.popover ul {
     padding: 10px;
+    margin: 0;
+}
+
+.popover li {
+    padding: 5px 0;
     cursor: pointer;
 }
 
@@ -86,4 +91,8 @@
     font-size: 16px;
     font-weight: bold;
     margin: 10px;
+}
+
+.popover h2 span {
+    color: #FF5A5F;
 }
