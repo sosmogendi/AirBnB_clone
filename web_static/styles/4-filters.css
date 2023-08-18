@@ -20,7 +20,7 @@
     border-radius: 4px;
     opacity: 1;
     transition: opacity 0.3s ease;
-    margin-right: 10px;
+    margin-left: auto;
 }
 
 .search-button:hover {
