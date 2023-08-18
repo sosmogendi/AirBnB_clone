@@ -20,6 +20,7 @@
     border-radius: 4px;
     opacity: 1;
     transition: opacity 0.3s ease;
+    cursor: pointer;
     margin-left: auto;
 }
 
