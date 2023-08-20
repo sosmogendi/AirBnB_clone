@@ -14,8 +14,8 @@
 }
 
 article {
-    width: calc(33.33% - 40px); /* Adjust as needed */
-    padding: 20px;
+	flex: 0 1 calc(33.33% - 40px);
+	padding: 20px;
     margin: 20px;
     border: 1px solid #FF5A5F;
     border-radius: 4px;
